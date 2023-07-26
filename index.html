@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatibile" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally count</title>
+    <link rel="stylesheet" href="node_modules/@shoelace-style/shoelace/dist/themes/light.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="node_modules/@shoelace-style/shoelace/dist/components/button/button.js" type="module"></script>
+    <script src="node_modules/@shoelace-style/shoelace/dist/components/dialog/dialog.js" type="module"></script>
+    <script src="node_modules/@shoelace-style/shoelace/dist/components/input/input.js" type="module"></script>
+    <script src="scripts.js" type="module" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            Tally count
+        </h1>
+    </header>
+            
+    <div class="counter-container">
+        <!-- Display the counter value in a simple div element -->
+        <div id="counterDisplay"></div>
+    </div>
+    <div class="button-container">
+        <!-- Add and subtract buttons using shoelace components -->
+        <sl-button data-key="add" class="plus" variant="success">+</sl-button>
+        <sl-button data-key="subtract" class="negative" variant="neutral">-</sl-button>
+    </div>
+    
+    <!-- Shoelace Dialog component to display reset confirmation -->
+    <sl-dialog id="resetDialog" label="Reset" class="dialog-overview">
+        You have reset your app!
+        <sl-button slot="footer" variant="primary" id="closeButton">Close</sl-button>
+    </sl-dialog>
+    <sl-button class="buton">Reset</sl-button>
+
+    <script type="module" src="node_modules/@shoelace-style/shoelace/dist/shoelace-autoloader.js"></script>
+</body>
+</html>
